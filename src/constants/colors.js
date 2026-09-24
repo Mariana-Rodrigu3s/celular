@@ -1,4 +1,4 @@
-const CORES = {
+const cores = {
     background: '',
     cardBg: '',
     primary: '',

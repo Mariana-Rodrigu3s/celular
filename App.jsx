@@ -11,7 +11,7 @@ export default function App() {
         <StatusBar barStyle="auto" />
         <View>
           <Header GOAL={GOAL} />
-          <WaterProgress></WaterProgress>
+          <WaterProgress consumed={100} goal={GOAL}></WaterProgress>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

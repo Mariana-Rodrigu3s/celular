@@ -1,10 +1,10 @@
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet,} from 'react-native'
 
 export default function Header( {GOAL}){
     return(
       <View style={headerStyles.container}>
         <Text style={headerStyles.title}>Diario de Hidratação</Text>
-        <Text style={headerStyles.subtitle}>Meta Diaria: {GOAL}</Text>
+        <Text style={headerStyles.subtitle}>Meta Diaria: {GOAL}ml</Text>
     </View>  
     )
     
@@ -20,11 +20,11 @@ const headerStyles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
 
-    color: COLORS.cores,
+    color: COLORS.textMain,
   },
   subtitle:{
     fontSize: 14,
     marginTop: 4,
-    color: COLORS.cores,
+    color: COLORS.textMuted,
   },
 })

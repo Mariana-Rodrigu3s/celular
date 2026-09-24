@@ -1,10 +1,10 @@
-const cores = {
+const COLORS = {
     background: '',
     cardBg: '',
     primary: '',
     secondary: '',
-    textMain: '',
-    textMuted: '',
+    textMain: '#6805f0',
+    textMuted: '#680580',
     danger: '',
     white: '',
 }

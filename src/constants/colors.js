@@ -1,4 +1,4 @@
-const COLORS = {
+export const COLORS = {
     background: '',
     cardBg: '',
     primary: '',

@@ -3,16 +3,16 @@ import { COLORS } from '../constants/colors'
 
 export default function Header( {GOAL}){
     return(
-      <View style={headerStyles.container}>
-        <Text style={headerStyles.title}>Diario de Hidratação</Text>
-        <Text style={headerStyles.subtitle}>Meta Diaria: {GOAL}ml</Text>
+      <View style={styles.container}>
+        <Text style={styles.title}>Diario de Hidratação</Text>
+        <Text style={styles.subtitle}>Meta Diaria: {GOAL}ml</Text>
     </View>  
     )
     
 }
 
 
-const headerStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container:{
     alignItems: 'center',
     marginBottom: 24,

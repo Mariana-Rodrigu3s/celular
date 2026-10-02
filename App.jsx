@@ -4,6 +4,7 @@ import Header from './src/components/Header';
 import { WaterProgress } from './src/components/WaterProgress';
 import ActionButon from './src/components/ActionButton';
 import { useState } from 'react';
+import MetaDiaria from './src/components/Meta';
 
 export default function App() {
     const GOAL = 2000
@@ -21,7 +22,7 @@ export default function App() {
 
 
     const handleMeta = (quantidade) =>{
-      setMeta((valor) => Math.max)
+      setMeta((valor) => valor + quantidade)
 
     }
 
@@ -39,9 +40,11 @@ export default function App() {
       <SafeAreaView>
         <StatusBar barStyle="auto" />
         <View>
-          <Header GOAL={GOAL} />
+          
+          <Header GOAL={meta} />
+          <MetaDiaria onMeta={handleMeta} meta={meta}></MetaDiaria>
           <WaterProgress consumed={consumed} goal={GOAL}></WaterProgress>
-          <ActionButon onAdd={handleAddWater} onReset={handleReset} ></ActionButon>
+          <ActionButon onAdd={handleAddWater} onReset={handleReset}  ></ActionButon>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

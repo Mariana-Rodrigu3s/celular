@@ -4,10 +4,16 @@ import { COLORS } from '../constants/colors'
 
 export default function ActionButon({onAdd, onReset}){
     return(
+
+
     <View style={styles.container}>
       <Text style={styles.label}>Adicionar consumo:</Text>
 
       <View style={styles.buttonRow}>
+        {/* Adiciona 100 */}
+        <Pressable style={styles.button} onPress={() => onAdd(100)}>
+          <Text style={styles.buttonText}>+ 100 mL</Text>
+        </Pressable>
         {/* Adiciona 200 mL */}
         <Pressable style={styles.button} onPress={() => onAdd(200)}>
           <Text style={styles.buttonText}>+ 200 mL</Text>
@@ -28,7 +34,12 @@ export default function ActionButon({onAdd, onReset}){
       <Pressable style={styles.resetButton} onPress={onReset}>
         <Text style={styles.resetButtonText}>Reiniciar</Text>
       </Pressable>
+
+
+    
     </View>
+
+
   );
 }
 

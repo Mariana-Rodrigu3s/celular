@@ -46,7 +46,7 @@ export default function App() {
           
           <Header GOAL={meta} />
           <MetaDiaria onMeta={handleMeta} meta={meta}></MetaDiaria>
-          <WaterProgress consumed={consumed} porcentagem={porcentagem}></WaterProgress>
+          <WaterProgress consumed={consumed} goal={meta}></WaterProgress>
           <ActionButon onAdd={handleAddWater} onReset={handleReset}  ></ActionButon>
         </View>
       </SafeAreaView>

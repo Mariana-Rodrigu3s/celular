@@ -11,6 +11,9 @@ export default function App() {
     const[meta,  setMeta] = useState(0)
     const [consumed, setConsumed] = useState(0)
 
+
+    // const porcentagem = meta > 0 ? (consumed / meta) * 100 : 0
+
     const handleAddWater = (ml) =>{
       setConsumed((consumed) => consumed + ml);
 
@@ -22,7 +25,7 @@ export default function App() {
 
 
     const handleMeta = (quantidade) =>{
-      setMeta((valor) => valor + quantidade)
+      setMeta((valor) => Math.max(0, valor + quantidade))
 
     }
 
@@ -43,7 +46,7 @@ export default function App() {
           
           <Header GOAL={meta} />
           <MetaDiaria onMeta={handleMeta} meta={meta}></MetaDiaria>
-          <WaterProgress consumed={consumed} goal={GOAL}></WaterProgress>
+          <WaterProgress consumed={consumed} porcentagem={porcentagem}></WaterProgress>
           <ActionButon onAdd={handleAddWater} onReset={handleReset}  ></ActionButon>
         </View>
       </SafeAreaView>
